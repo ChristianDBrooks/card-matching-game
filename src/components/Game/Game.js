@@ -139,8 +139,12 @@ export default function Game() {
   }
 
   function revealAllCards() {
+    // If reveal setting is turned on in main menu...
     if (revealCards) {
       deck.forEach((card, index) => {
+        // Instead of flipping them all over at once, snake through the deck
+        // and flip each card over one after the other, with a seperation for
+        // 100 ms between each flip.
         setTimeout(() => {flipCard(card)}, (index + 1) * 100);
       })
     }
@@ -156,7 +160,7 @@ export default function Game() {
     setTimeout(() => {
       card.flipped = false;
       setCardList(buildCardList(deck))
-    }, 2000);
+    }, 2500);
   }
 
   function handleSelectCard(index) {
