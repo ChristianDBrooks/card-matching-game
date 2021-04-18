@@ -1,8 +1,39 @@
 # Welcome To Card Matcher!
 
+## Play Online
 Click [here](https://card-matching-game-christianb.herokuapp.com/) to play the game on Heroku!
 
 Click [here](https://card-matcher-chistian-brooks.netlify.app/) to play the game on Netlify!
+
+## How-To Run Locally
+
+First clone the repository to your hard drive
+
+```
+git clone https://github.com/ChristianDBrooks/card-matching-game.git
+```
+Next you will want to navigate into the folder
+
+```
+cd card-matching-game
+```
+
+Next you can choose to one of two things:
+
+1) Run the production code on a local web server.
+2) Install dependencies and run the code using React.
+
+First Option Using `Serve`
+```
+npm install -g serve
+serve -s build
+```
+
+Second Option Using `React`
+```
+yarn install
+npm start
+```
 
 ## Thought Process
 
