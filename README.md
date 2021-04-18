@@ -47,16 +47,16 @@ On the React side of things I decided to go with functional components even thou
 
 As for state management I tried keep the Game component the smartest component for state, and keep any other components as stateless as possible. So all the game logic could run at the top level, and be passed down as needed.
 
-For styling, I really wasn't sure what the standard is, I researched a couple different strategies, but it seemed like a lot of them involved bringing in other packages. So I just kept all of my styles in css files, tried not to use in-line styles where I could manage, and was careful to not overlap naming within components.
+For styling strategies in React, I really wasn't sure what the standard is, I researched a couple different strategies, but it seemed like a lot of them involved bringing in other packages. So I just kept all of my styles in css files, tried not to use in-line styles where I could manage, and was careful to not overlap naming within components.
 
 If I implemented more features in the future some ideas would be:
 * Changing how I set the card images to a scalable solution. I couldn't get require() working.
-* Introduce an api where I could fetch new images everytime the deck is shuffled.
-* Add a timer, and make games timed, or turns timed.
-* Clean up UI, make the page even cleanly reponsive.
-* Make the game configurable to more cards. Its almost do able now, but the images is where I would have problems.
+* Introduce an api where I could fetch new images everytime the deck is shuffled
+* Add a timer, and make games or turns timed
+* Clean up UI, make the page even more responsive. Maybe change them/add to the theme.
+* Make the game configurable with the capability to add more cards. Its almost do able now, but the images is where I would have problems.
 * Unit testing
-* Name player names customizable
+* Make player names customizable
 
 ## Issues
 
