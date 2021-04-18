@@ -1,0 +1,35 @@
+
+.player {
+  border-radius: 15px;
+  padding: 16px;
+  background-color: #808080;
+}
+
+.player.active {
+  background-color: #ffffff;
+}
+
+.player.active > .playerName {
+  font-weight: 700;
+}
+
+.playerName {
+  font-size: 12px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.score {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .playerName {
+    font-size: 16px;
+  }
+  .score {
+    font-size: 24px;
+  }
+}

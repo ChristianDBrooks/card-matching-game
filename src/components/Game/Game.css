@@ -1,0 +1,115 @@
+
+.gameBorder {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.gameBorder {
+  padding-top: 32px;
+}
+
+.startMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0, .8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.gameStartContent {
+  padding: 32px;
+}
+
+.gameTitle {
+  color: white;
+  font-size: 32px;
+}
+
+.buttonMenu {
+  display: flex;
+  flex-direction: row;
+}
+
+.buttonMenu > button:not(:first-of-type) {
+  margin-left: 16px;
+}
+
+
+.gameOver {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0, .8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.gameOverContent {
+  color: white;
+  text-align: center;
+}
+
+.gameOverContent > h1 {
+  margin: 0;
+  font-size: 72px;
+}
+
+.gameOverContent > p {
+  margin: 0;
+  margin-bottom: 32px;
+  font-size: 48px;
+}
+
+.gameBoard {
+  height: 50vh;
+  margin-bottom: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 16px;
+  grid-template-areas:
+    ". . . ."
+    ". . . ."
+    ". . . ."
+    ". . . ."
+    ". . . ."
+}
+
+.leaderBoard {
+  height: 10vh;
+  margin-top: auto;
+  margin-bottom: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  grid-template-areas:
+    "left right"
+}
+
+#playerOne {
+  grid-area: left;
+  text-align: left;
+}
+
+#playerTwo {
+  grid-area: right;
+  text-align: right;
+}
+
+.gameMenu {
+  height: 10vh;
+}
