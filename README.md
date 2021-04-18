@@ -1,6 +1,8 @@
 # Welcome To Card Matcher!
 
-To play the game click [here](https://card-matching-game-christianb.herokuapp.com/)!
+Click [here](https://card-matching-game-christianb.herokuapp.com/) to play the game on Heroku!
+
+Click [here](https://card-matcher-chistian-brooks.netlify.app/) to play the game on Netlify!
 
 ## Thought Process
 
@@ -8,9 +10,13 @@ I immediately knew the genereal lay out I wanted for the design and that I could
 
 I knew I wanted to keep a single source of truth for the data structure and state management. So I started there, buy creating a function that could generate that data for me. I wanted to create pairs of objects, that I could see if they were in the same group, and if they were, they would be a match. So my "Card" object ultimately had an id, an index for referencing the deck, and a groupId, that would relate 2 objects together. This is what delegated the matching pairs.
 
-As for the business logic, I just took it piece by piece, and then refactored out my code into smaller functions to make the code more understandable and readable as I went. Tthe main portion of the logic was in the clickHandler and that was driver of the application, and from there it was just manipulating my "deck", throwing in some animations and styling to make the game, make sense.
+As for the business logic, I just took it piece by piece, and then refactored out my code into smaller functions to make the code more understandable and readable as I went. So essentially I created the logic with functional programming. The main portion of the logic was in the clickHandler and that was driver of the application, and from there it was just manipulating my "deck", throwing in some animations and styling to make the game, make sense, and few conditions here and there, for player turns, game over, etc.
 
 On the React side of things I decided to go with functional components even thought my experience in the past I mostly dealt with classes. But I see its pretty common now, to use the "useState" hook, which is also something I hadn't used. So those were great learning experiences.
+
+As for state management I tried keep the Game component the smartest component for state, and keep any other components as stateless as possible. So all the game logic could run at the top level, and be passed down as needed.
+
+For styling, I really wasn't sure what the standard is, I researched a couple different strategies, but it seemed like a lot of them involved bringing in other packages. So I just kept all of my styles in css files, tried not to use in-line styles where I could manage, and was careful to not overlap naming within components.
 
 If I implemented more features in the future it some ideas would be:
 * Changing how I set the card images to a scalable solution. I couldn't get require() working.
@@ -18,7 +24,6 @@ If I implemented more features in the future it some ideas would be:
 * Add a timer, and make games timed, or turns timed.
 * Clean up UI, make the page even cleanly reponsive.
 * Make the game configurable to more cards. Its almost do able now, but the images is where I would have problems.
-
 
 ## Problems
 

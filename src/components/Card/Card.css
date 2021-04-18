@@ -25,7 +25,6 @@
 }
 
 .card__face--front {
-  background-image: url('../../images/cardBack.png');
   background-image: linear-gradient(45deg, rgb(255, 174, 0), rgb(255, 60, 0));
   cursor: pointer;
 }
@@ -54,49 +53,49 @@
 /* This is not a scalable solution for dynamic images, but I could not get the src images working for the card images. */
 
 .card-1 {
-  background-image: url('../../images/card-1.jpg');
+  background-image: url('../../images/card-1-min.jpg');
 }
 
 .card-2 {
-  background-image: url('../../images/card-2.jpg');
+  background-image: url('../../images/card-2-min.jpg');
   
 }
 .card-3 {
-  background-image: url('../../images/card-3.jpg');
+  background-image: url('../../images/card-3-min.jpg');
   
 }
 
 .card-4 {
-  background-image: url('../../images/card-4.jpg');
+  background-image: url('../../images/card-4-min.jpg');
   
 }
 
 .card-5 {
-  background-image: url('../../images/card-5.jpg');
+  background-image: url('../../images/card-5-min.jpg');
   
 }
 
 .card-6 {
-  background-image: url('../../images/card-6.jpg');
+  background-image: url('../../images/card-6-min.jpg');
   
 }
 
 .card-7  {
-  background-image: url('../../images/card-7.jpg');
+  background-image: url('../../images/card-7-min.jpg');
 }
 
 
 .card-8 {
-  background-image: url('../../images/card-8.jpg');
+  background-image: url('../../images/card-8-min.jpg');
   
 }
 
 .card-9 {
-  background-image: url('../../images/card-9.jpg');
+  background-image: url('../../images/card-9-min.jpg');
   
 }
 
 .card-10 {
-  background-image: url('../../images/card-10.jpg');
+  background-image: url('../../images/card-10-min.jpg');
   
 }
