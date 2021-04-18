@@ -21,9 +21,11 @@ export default function Game() {
   let playerScores = [0, 0]
   let players = ['Player One', 'Player Two'];
   let [playerTurn, setPlayerTurn] = useState(0);
+  const [revealCards, setRevealCards] = useState(true);
   const [cardList, setCardList] = useState(buildCardList(deck));
   const [showGameOver, setShowGameOver] = useState(false);
   const [showGameStart, setShowGameStart] = useState(true);
+  const [changeButton, setChangeButton] = useState(false);
   const [showInstructions, setShowInstructions] = useState(false);
   const [winningPlayer, setWinningPlayer] = useState(0);
   const [playerOneScore, setPlayerOneScore] = useState(0)
@@ -34,10 +36,13 @@ export default function Game() {
         { 
           showGameStart
           ? <GameStart 
-              setShowGameStart={setShowGameStart}
+              changeButton={changeButton}
+              handleStartGame={handleStartGame}
               showGameStart={showGameStart}
               setShowInstructions={setShowInstructions}
-              showInstructions={showInstructions}/>
+              showInstructions={showInstructions}
+              setRevealCards={setRevealCards}
+              revealCards={revealCards}/>
           : null
         }
 
@@ -94,6 +99,7 @@ export default function Game() {
               index={c.index}
               groupId={c.groupId}
               selected={c.selected}
+              flipped={c.flipped}
               matched={c.matched}
               turn={playerTurn}
               onClick={handleSelectCard}
@@ -124,6 +130,33 @@ export default function Game() {
     }
 
     return array;
+  }
+
+  function handleStartGame(showMenu) {
+    if (!changeButton) setChangeButton(true);
+    setShowGameStart(showMenu);
+    if (!changeButton) revealAllCards();
+  }
+
+  function revealAllCards() {
+    if (revealCards) {
+      deck.forEach((card, index) => {
+        setTimeout(() => {flipCard(card)}, (index + 1) * 100);
+      })
+    }
+  }
+
+  function flipCard(card) {
+    // Use a unique field called 'flipped' so that game
+    // logic doesn't get corrupted by using 'select'.
+    card.flipped = true;
+    // Once we render the deck changes, the cards will flip.
+    setCardList(buildCardList(deck))
+    // Reveal the card for a total of 2 seconds, then flip it back.
+    setTimeout(() => {
+      card.flipped = false;
+      setCardList(buildCardList(deck))
+    }, 2000);
   }
 
   function handleSelectCard(index) {
@@ -245,5 +278,6 @@ export default function Game() {
     setPlayerTwoScore(0);
     setPlayerTurn(0)
     setShowGameOver(false);
+    revealAllCards();
   }
 }
