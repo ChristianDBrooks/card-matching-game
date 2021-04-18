@@ -9,32 +9,6 @@
   overflow: hidden;
 }
 
-.gameBorder {
-  padding-top: 32px;
-}
-
-.startMenu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0,0,0, .8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-}
-
-.gameStartContent {
-  padding: 32px;
-}
-
-.gameTitle {
-  color: white;
-  font-size: 32px;
-}
-
 .buttonMenu {
   display: flex;
   flex-direction: row;
@@ -44,38 +18,8 @@
   margin-left: 16px;
 }
 
-
-.gameOver {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0,0,0, .8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-}
-
-.gameOverContent {
-  color: white;
-  text-align: center;
-}
-
-.gameOverContent > h1 {
-  margin: 0;
-  font-size: 72px;
-}
-
-.gameOverContent > p {
-  margin: 0;
-  margin-bottom: 32px;
-  font-size: 48px;
-}
-
 .gameBoard {
-  height: 50vh;
+  height: 80%;
   margin-bottom: 16px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -90,7 +34,7 @@
 }
 
 .leaderBoard {
-  height: 10vh;
+  height: 10%;
   margin-top: auto;
   margin-bottom: 16px;
   display: grid;
@@ -111,5 +55,5 @@
 }
 
 .gameMenu {
-  height: 10vh;
+  height: 10%;
 }

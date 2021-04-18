@@ -1,8 +1,10 @@
 import './Game.css';
+import CardModel from '../../models/CardModel';
 import Card from '../Card/Card';
 import Button from '../Button/Button';
-import CardModel from '../../models/CardModel';
 import PlayerScore from '../PlayerScore/PlayerScore';
+import GameStart from '../GameStart/GameStart';
+import GameOver from '../GameOver/GameOver';
 import { useState } from 'react';
 
 let debuggingOn = false;
@@ -31,31 +33,20 @@ export default function Game() {
       <div className='gameBorder'>
         { 
           showGameStart
-          ? <div className={`startMenu`}>
-              <div className='gameStartContent'>
-                <h1 className='gameTitle'>Welcome to Card Matcher</h1>
-                <div className='buttonMenu'>
-                  <Button title="Start Game" onClick={() => {setShowGameStart(!showGameStart)}}/>
-                  <Button title="Instructions" onClick={() => {setShowInstructions(!showInstructions)}}/>
-                </div>
-              </div>
-            </div> 
+          ? <GameStart 
+              setShowGameStart={setShowGameStart}
+              showGameStart={showGameStart}
+              setShowInstructions={setShowInstructions}
+              showInstructions={showInstructions}/>
           : null
         }
 
         { 
           showGameOver
-          ? <div className='gameOver'>
-              <div className='gameOverContent'>
-                <h1>Game Over!</h1>
-                {
-                  [0, 1].includes(winningPlayer)
-                  ? <p>{players[winningPlayer]} wins!</p>
-                  : <p>Tie Game!</p>
-                }
-                <Button title="New Game" onClick={() => {resetGame()}}/>
-              </div>
-            </div>
+          ? <GameOver
+              isTie={[0, 1].includes(winningPlayer)}
+              winningPlayerName={players[winningPlayer]}
+              resetGame={resetGame}/>
           : null
         }
 

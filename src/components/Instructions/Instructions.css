@@ -1,0 +1,11 @@
+.instructions {
+  padding: 16px;
+  text-align: center;
+  color: black;
+  background: white;
+  border-radius: 5px;
+}
+
+#gameInstructions {
+  position: absolute;
+}
