@@ -5,9 +5,9 @@ Click [here](https://card-matching-game-christianb.herokuapp.com/) to play the g
 
 Click [here](https://card-matcher-chistian-brooks.netlify.app/) to play the game on Netlify!
 
-## How-To Run Locally
+## How-To Run For a Developer
 
-First clone the repository to your hard drive
+First clone the repository to your hard drive. (You may need to fork the repo first.)
 
 ```
 git clone https://github.com/ChristianDBrooks/card-matching-game.git
@@ -49,16 +49,18 @@ As for state management I tried keep the Game component the smartest component f
 
 For styling, I really wasn't sure what the standard is, I researched a couple different strategies, but it seemed like a lot of them involved bringing in other packages. So I just kept all of my styles in css files, tried not to use in-line styles where I could manage, and was careful to not overlap naming within components.
 
-If I implemented more features in the future it some ideas would be:
+If I implemented more features in the future some ideas would be:
 * Changing how I set the card images to a scalable solution. I couldn't get require() working.
 * Introduce an api where I could fetch new images everytime the deck is shuffled.
 * Add a timer, and make games timed, or turns timed.
 * Clean up UI, make the page even cleanly reponsive.
 * Make the game configurable to more cards. Its almost do able now, but the images is where I would have problems.
+* Unit testing
+* Name player names customizable
 
-## Problems
+## Issues
 
-Problem
+Problem #1
 * When updating and then immediately accessing a state variable, the state has not updated yet. This happens because React queues updates, but doesn't update them immediately.
 
 Attempted
@@ -71,7 +73,7 @@ Solution
 
 ---
 
-Problem
+Problem #2
 * When testing on mobile emultor in chrome, sizing and position was responsive and perfect. However when testing on mobile hitting localhost:3000 on my phone, I noticed some extra scrollable space that messed up the initial view, and cut off the game buttons, and forcing the plaer to scroll.
 
 Attempted.
@@ -79,7 +81,7 @@ Attempted.
 
 ---
 
-Problem
+Problem #3
 * Tried using require() in a src img and dynamically set the src url, but the img was detected and then would not show up on load.
 
 Attempted.
