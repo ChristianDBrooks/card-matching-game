@@ -1,9 +1,9 @@
 # Welcome To Card Matcher!
 
 ## Play Online
-Click [here](https://card-matching-game-christianb.herokuapp.com/) to play the game on Heroku!
+Play the game on <a href="https://card-matcher-chistian-brooks.netlify.app/" target="_blank">Netlify</a>!
 
-Click [here](https://card-matcher-chistian-brooks.netlify.app/) to play the game on Netlify!
+Play the game on <a href="https://card-matching-game-christianb.herokuapp.com/" target="_blank">Heroku</a>!
 
 ## How-To Run For a Developer
 
